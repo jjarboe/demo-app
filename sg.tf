@@ -7,7 +7,7 @@ resource "aws_security_group" "project_sg" {
     to_port     = 0
     from_port   = 0
     protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["<cidr>"]
   }
 
   egress {
@@ -28,6 +28,6 @@ resource "aws_security_group" "resource_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0", "19.16.0.0/24"]
+    cidr_blocks = ["<cidr>", "<cidr>"]
   }
 }
